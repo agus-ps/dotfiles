@@ -50,16 +50,10 @@ vars:
     SQL_PORTS: "1433,3306,5432"
 
 # --- Reglas ---
-default-rule-path: /etc/suricata/rules
+# --- Reglas ---
+default-rule-path: /var/lib/suricata/rules # <-- APUNTA AL DIRECTORIO CORRECTO
 rule-files:
-  - emerging-scan.rules
-  - emerging-ftp.rules
-  - emerging-ssh.rules
-  - emerging-telnet.rules
-  - emerging-dos.rules
-  - emerging-web_server.rules
-  - emerging-web_specific_apps.rules
-  - emerging-sql.rules
+  - suricata.rules                         # <-- CARGA EL ÚNICO ARCHIVO
 
 # --- Flujo y capa de aplicación ---
 flow:
