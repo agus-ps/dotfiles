@@ -35,6 +35,15 @@ vars:
   address-groups:
     HOME_NET: "[172.31.0.0/20]"     # Cambiá según tu red interna
     EXTERNAL_NET: "!$HOME_NET"
+    HTTP_SERVERS: "$HOME_NET"
+    SQL_SERVERS: "$HOME_NET"
+
+  port-groups:
+    HTTP_PORTS: "80,8080,8000,443"
+    SHELLCODE_PORTS: "!80"
+    ORACLE_PORTS: 1521
+    SSH_PORTS: 22
+    SQL_PORTS: "1433,3306,5432"
 
 # --- Reglas ---
 default-rule-path: /etc/suricata/rules
