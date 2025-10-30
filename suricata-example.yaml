@@ -9,7 +9,7 @@ host-mode: sniffer-only
 
 # --- Captura de tráfico ---
 af-packet:
-  - interface: eth0       # Cambiá por tu interfaz real (ip a)
+  - interface: ens5       # Cambiá por tu interfaz real (ip a)
     threads: auto
     cluster-id: 99
     cluster-type: cluster_flow
@@ -33,7 +33,7 @@ napatech:
 # --- Variables de red ---
 vars:
   address-groups:
-    HOME_NET: "[172.31.0.0/16]"     # Cambiá según tu red interna
+    HOME_NET: "[172.31.0.0/20]"     # Cambiá según tu red interna
     EXTERNAL_NET: "!$HOME_NET"
 
 # --- Reglas ---
