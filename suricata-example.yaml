@@ -35,8 +35,12 @@ vars:
   address-groups:
     HOME_NET: "[172.31.0.0/20]"     # Cambiá según tu red interna
     EXTERNAL_NET: "!$HOME_NET"
+    DNS_SERVERS: "$HOME_NET"
+    SMTP_SERVERS: "$HOME_NET"
     HTTP_SERVERS: "$HOME_NET"
     SQL_SERVERS: "$HOME_NET"
+    TELNET_SERVERS: "$HOME_NET"
+    SSH_SERVERS: "$HOME_NET"
 
   port-groups:
     HTTP_PORTS: "80,8080,8000,443"
