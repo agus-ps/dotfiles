@@ -33,7 +33,7 @@ napatech:
 # --- Variables de red ---
 vars:
   address-groups:
-    HOME_NET: "[172.31.0.0/20]"     # Cambiá según tu red interna
+    HOME_NET: "[172.31.32.0/20]"     # Cambiá según tu red interna
     EXTERNAL_NET: "!$HOME_NET"
     DNS_SERVERS: "$HOME_NET"
     SMTP_SERVERS: "$HOME_NET"
